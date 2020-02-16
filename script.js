@@ -177,14 +177,16 @@ const goods = {
     }
 };
 let listDraw = 0;
+
 function createCards() {
     function up() {
         setTimeout(function () {
             switchB = 0;
-            test.style.top= `${0}px`;
-            test.style.opacity= `${0}`;
-        },333)
+            test.style.top = `${0}px`;
+            test.style.opacity = `${0}`;
+        }, 333)
     }
+
     up();
     let container = document.createElement('div');
     container.classList.add("container");
@@ -333,14 +335,15 @@ function listCards() {
     function up() {
         setTimeout(function () {
             switchB = 0;
-            test.style.top= `${0}px`;
-            test.style.opacity= `${0}`;
-        },333)
+            test.style.top = `${0}px`;
+            test.style.opacity = `${0}`;
+        }, 333)
     }
+
     up();
-    if (listDraw > 0){
-        container.innerHTML = '';
-    }
+    // if (listDraw > 0){
+    //     container.innerHTML = '';
+    // }
 
     let arr = [];
 
@@ -354,10 +357,11 @@ function listCards() {
 
     let container = document.createElement('div');
     container.classList.add('container2');
+
     function startList() {
 
 
-        if (listDraw === 0) {
+        // if (listDraw === 0) {
 
 
             let btnWrapper = document.createElement('div');
@@ -377,8 +381,8 @@ function listCards() {
 
             globalContainer.append(btnWrapper);
             draw();
-        }
-        listDraw+=1;
+        // }
+        // listDraw += 1;
 
 
     }
