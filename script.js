@@ -176,9 +176,12 @@ const goods = {
         img: `https://friendlystock.com/wp-content/uploads/2019/12/8-sliced-pizza-cartoon-clipart.jpg`,
     }
 };
-let listDraw = 0;
-
+let back = document.querySelector('header');
 function createCards() {
+    back.style.backgroundPositionY = 'bottom';
+    back.style.backgroundPositionX = 'center';
+
+
     function up() {
         setTimeout(function () {
             switchB = 0;
@@ -332,6 +335,9 @@ function createCards() {
 }
 
 function listCards() {
+    back.style.backgroundPositionY = 'top';
+    back.style.backgroundPositionX = 'center';
+
     function up() {
         setTimeout(function () {
             switchB = 0;
@@ -341,9 +347,7 @@ function listCards() {
     }
 
     up();
-    // if (listDraw > 0){
-    //     container.innerHTML = '';
-    // }
+
 
     let arr = [];
 
@@ -361,7 +365,6 @@ function listCards() {
     function startList() {
 
 
-        // if (listDraw === 0) {
 
 
             let btnWrapper = document.createElement('div');
@@ -381,8 +384,7 @@ function listCards() {
 
             globalContainer.append(btnWrapper);
             draw();
-        // }
-        // listDraw += 1;
+
 
 
     }
